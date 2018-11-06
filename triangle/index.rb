@@ -1,7 +1,9 @@
-puts "Введите основание и высоту треугольника"
+puts "Введите основание треугольника"
+base = gets.chomp.to_f
 
-height, base = gets.chomp.split(" ").map(&:to_i)
+puts "Введите высоту треугольника"
+height = gets.chomp.to_f
 
 square = 0.5 * height * base
 
-puts("Площадь треугольника с основанием #{base} и высотой #{height} равен #{square}")
+puts "Площадь треугольника с основанием #{base} и высотой #{height} равен #{square}"
