@@ -1,20 +1,26 @@
-puts 'Введите коэффициенты a b c квадратного уравнения'
+puts "Введите коэффициент 'a' квадратного уравнения"
+a = gets.chomp.to_f
 
-a, b, c = gets.chomp.split(" ").map(&:to_i)
+puts "Введите коэффициент 'b' квадратного уравнения"
+b = gets.chomp.to_f
+
+puts "Введите коэффициент 'c' квадратного уравнения"
+c = gets.chomp.to_f
 
 disc = b**2 - 4*a*c
 
-message = 'дискрименант '
+message = 'дискриминант '
 
-if(disc > 0)
-    korenA = (-b + Math.sqrt(disc)) / 2 * a
-    korenB = (-b - Math.sqrt(disc)) / 2 * a
-    message += "равен #{disc}, корни #{korenA}, #{korenB}"  
-elsif (disc == 0)
-    korni = -b / 2 * a
-    message += "нулевой #{disc}, корни равны #{korni}"
+if disc > 0
+  sqrtDisc = Math.sqrt(disc)
+  korenA = (( -b - sqrtDisc ) / 2 * a).round(3)
+  korenB = (( -b + sqrtDisc ) / 2 * a).round(3)
+  message += "равен #{disc}, корни #{korenA}, #{korenB}"  
+elsif disc == 0
+  korni = (-b / 2 * a).round(3)
+  message += "нулевой #{disc}, корни равны #{korni}"
 else
-    message += "отрицательный #{disc}, корней нет"
+  message += "отрицательный #{disc}, корней нет"
 end
 
 puts message
