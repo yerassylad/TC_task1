@@ -13,9 +13,9 @@ message = 'дискриминант '
 
 if disc > 0
   sqrtDisc = Math.sqrt(disc)
-  korenA = (( -b - sqrtDisc ) / 2 * a).round(3)
-  korenB = (( -b + sqrtDisc ) / 2 * a).round(3)
-  message += "равен #{disc}, корни #{korenA}, #{korenB}"  
+  korenA = ((-b - sqrtDisc) / 2 * a).round(3)
+  korenB = ((-b + sqrtDisc) / 2 * a).round(3)
+  message += "равен #{disc}, корни #{korenA}, #{korenB}"
 elsif disc == 0
   korni = (-b / 2 * a).round(3)
   message += "нулевой #{disc}, корни равны #{korni}"
