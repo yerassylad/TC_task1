@@ -1,13 +1,13 @@
-puts 'Введите ваше имя и рост'
+puts 'Введите ваше имя'
+name = gets.chomp
 
-name, height = gets.chomp.split(" ")
+puts 'Введите ваш рост'
+height = gets.chomp.to_i
 
-weight = height.to_i - 110
+weight = height - 110
 
 if weight > 0 then
-    puts "#{name}, Ваш идеальный вес #{weight} кг."
+  puts "#{name}, Ваш идеальный вес #{weight} кг."
 else
-    puts "Ваш вес уже оптимальный"
+  puts "Ваш вес уже оптимальный"
 end
- 
-
